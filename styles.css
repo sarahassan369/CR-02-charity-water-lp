@@ -25,6 +25,7 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
+  background-image: url("img/IMG_4417.jpeg");
   background-color: #f4f8fb; /* Soft light blue for a fresh look */
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
