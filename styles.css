@@ -14,7 +14,7 @@ Secondary Colors:
 
 Fonts:
 - Proxima Nova
-- Avenir
+- Montserrat
 
 */
 
@@ -23,21 +23,60 @@ Fonts:
   This CSS uses the provided color palette and beginner-friendly styles.
 */
 
-/* Set up the main font and background color for the whole page */
+/* NAVBAR */
+.navbar {
+  background-color: #030303;
+  color: #f5eded;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #f1eaea;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #0077cc;
+}
+
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #222;
+  padding-top: 80px;
+  font-family: Proxima Nova, Montserrat;
+/* Set up the main font and background color for the whole page */
+  background-color: #0c0c0c; /* Light gray background */
+  color: #333; /* Dark text for readability */
+  line-height: 1.6; /* Spacing between lines for better readability */
+  margin: 0; /* Remove default margin */
+  font-size: 16px; /* Base font size */
+
 }
 
 /* Add a slight shadow and rounded corners to each section for depth */
 section {
-  background: #fff; /* White background for sections */
+  background:rgb(241, 238, 238); /* White background for sections */
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
   padding: 24px 16px;
 }
 
@@ -45,19 +84,20 @@ section {
 .hero {
   position: relative; /* Needed for overlay */
   /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-image: url('img/IMG_4417.jpeg');
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
+  color: #FFC907;                 /* White text for contrast */
+  /* Light text for readability */
+  text-align: far-left;          /* Center the text */
+  padding: 350px 40px;          /* Add space above and below */
   border-radius: 0 0 16px 16px; /* Only round bottom corners */
 
   /* Add a dark overlay for better text readability */
   /* This uses a simple linear-gradient overlay */
   background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+ 
 }
 
 /* Make the headline bold and modern */
@@ -66,7 +106,7 @@ section {
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+  text-shadow: 0 2px 8px rgba(214, 207, 207, 0.15); /* Soft shadow for readability */
 }
 
 /* Style the subheadline */
@@ -74,21 +114,33 @@ section {
   font-size: 1.2em;
   margin-top: 0;
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  color:#f1eaea
 }
 
 /* Story Section Styles */
 .story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
+  background-color: #FFF7E1; /* Secondary Light Blue */
   color: #222;
-  text-align: center;
-  padding: 30px 20px;
+  text-align: left;
+  padding: 100px 40px;
 }
 
 /* Add accent color to section headings */
 h2 {
-  color: #2E9DF7; /* Primary blue */
+  color: #77A8BB; /* Primary blue */
   margin-top: 0;
-  font-weight: bold;
+  font-weight: 900;
+   font-size: xx-large;
+  font-synthesis-weight: 900;
+  text-align: center;
+
+}
+.story p {
+  font-size: 1.35em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-family:proxima nova, montserrat;
 }
 
 /* Call-to-Action Section Styles */
@@ -96,7 +148,7 @@ h2 {
   background-color: #FFC907; /* Primary Yellow */
   color: #222;
   text-align: center;
-  padding: 30px 20px;
+  padding: 350px 50px;
 }
 
 /* Style the impact story image */
