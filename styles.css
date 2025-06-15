@@ -36,12 +36,22 @@ Fonts:
   width: 97%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-}
+} /* <-- Added this closing brace to end the .navbar block */
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; /* smaller gap between logo and text */
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
 
+.logo-img {
+  height: 40px; /* make logo bigger */
+  width: auto;
+  display: block;
+}
 .nav-links {
   list-style: none;
   display: flex;
@@ -86,12 +96,11 @@ section {
   background-image: url('img/IMG_4417.jpeg');
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #FFC907;                 /* White text for contrast */
+  background-repeat: no-repeat; /* White text for contrast */
   /* Light text for readability */
-  text-align: far-left;          /* Center the text */
-  padding: 350px 40px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
+  text-align:left;          /* Align the text to the left */
+  padding:350px 40px;          /* Add space above and below */
+  border-radius:0 0 16px 16px; /* Only round bottom corners */
 
   /* Add a dark overlay for better text readability */
   /* This uses a simple linear-gradient overlay */
@@ -104,23 +113,49 @@ section {
   font-size: 2.5em;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: 15px;
+  margin-bottom: 0.1rem;
   text-shadow: 0 2px 8px rgba(214, 207, 207, 0.15); /* Soft shadow for readability */
+  font-family: 'Montserrat'; /* Use Montserrat font */
+  font-weight: 900; /* Make the headline bold */
+  color: #FFC907; /* Yellow color for the headline */
 }
 
 /* Style the subheadline */
+.hero h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: -0.2rem;
+  margin-bottom: 0px;
+  text-shadow: 0 2px 8px rgba(214, 207, 207, 0.15); /* Soft shadow for readability */
+  font-family: 'Montserrat'; /* Use Montserrat font */
+  font-weight: 900; /* Make the headline bold */
+  color: #FFC907; /* Yellow color for the headline */
+  text-align: left;
+}
+
 .hero p {
   font-size: 1.2em;
   margin-top: 0;
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
-  color:#f1eaea
+  color:#f1eaea;
+  font-family: 'Montserrat'; /* Use Montserrat font */
+  font-weight: 300; /* Make the subheadline slightly bold */
 }
 
 /* Story Section Styles */
 .story {
   background-color: #FFF7E1; /* Secondary Light Blue */
-  color: #222;
+  color: #080808;
   text-align: left;
+  /* Add padding for spacing */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10); /* Soft blue shadow */
+  /* Add padding for spacing */     
+  text-size-adjust: 100%;
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+  font-weight: 500; /* Regular weight for body text */
+  /* Add padding for spacing */ 
   padding: 100px 40px;
 }
 
@@ -128,60 +163,225 @@ section {
 h2 {
   color: #77A8BB; /* Primary blue */
   margin-top: 0;
+  margin-bottom: 0px;
   font-weight: 900;
    font-size: xx-large;
   font-synthesis-weight: 900;
   text-align: center;
+  font-family: 'Montserrat'; /* Use Montserrat font */
 
 }
-.story p {
-  font-size: 1.35em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-weight: 500;
-  font-family:proxima nova, montserrat;
+
+/* Style the story section */
+.story-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px;
 }
+text-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.first-image {
+  width: 45%;
+  max-width: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+  length: 1s;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+}
+.second-image {
+  width: 85%;
+  height: 85%;
+  max-width: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+}
+.third-image {
+  width: 40%;
+  height: 85%;
+  max-width: 400px;
+  border-radius: 8px;
+  object-fit: cover; /* Added missing semicolon */
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+}
+.fourth-image {
+  width: 60%;
+  max-width: 600px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+}
+.text {
+  width: 50%;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  text-wrap:unset;
+}
+.text-paragraph-third
+  {
+    width: 55%;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-right: 20px;
+  }
+.story p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #080808; /* Dark text for readability */
+  margin-top: 0;
+}
+.fourth-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fourth-text {
+  width: 35%;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #080808;
+}
+
+
+
+.wide-image {
+  width: 100%;
+  max-height: 700px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
 
 /* Call-to-Action Section Styles */
 .call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
+  background-color: #1A1A1A; /* Primary Yellow */
+  color: #f5eded;  
   text-align: center;
   padding: 350px 50px;
 }
 
 /* Style the impact story image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+/* 
+  The following properties were outside of a selector and caused an error.
+  If you want to style a specific section (like .impact-story), wrap these inside a selector.
+  Example for a section with class "impact-story":
+*/
+.real-impact {
+  position: relative; /* Needed for overlay */
+  /* Set a background image that covers the whole section */
+  background-image: url('img/IMG_4482.jpeg');
+  background-size: cover;      /* Make the image cover the whole area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* White text for contrast */
+  /* Light text for readability */
+  text-align:left;          /* Align the text to the left */
+  padding:350px 40px;          /* Add space above and below */
+  border-radius:10px; /* Only round bottom corners */
+  /* Add a dark overlay for better text readability */
+  /* This uses a simple linear-gradient overlay */
+  background-blend-mode: darken;
+ 
 }
+.real-impact h2 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  text-shadow: 0 2px 8px rgba(214, 207, 207, 0.15); /* Soft shadow for readability */
+  font-family: 'Montserrat'; /* Use Montserrat font */
+  font-weight: 900; /* Make the headline bold */
+  color: #FFF7E1; /* Yellow color for the headline */
+}
+
+.impact-story {
+  background-color: rgba(0, 0, 0, 0.6); /* dark transparent background */
+  padding: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+  z-index: 1; /* ensures it's above the image */
+  position: relative; /* ensures z-index works */
+  text-align:center;
+  color: #f5f0e4; /* Light text for readability */
+  font-size: 1.2rem}
 
 /* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
+.cta {
+  background: url('img/cta-background.jpg') center center/cover no-repeat;
+  position: relative;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 3rem;
+}
+
+.cta-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: #FFC907;
+  color: white;
+  padding: 0.8rem 1.5rem;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 5px;
   font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+.cta-button:hover {
+  background-color: #FFC907;
 }
-
 /* Add some spacing between sections */
 section {
   margin-bottom: 20px;
@@ -245,5 +445,8 @@ section {
 
   .impact-image {
     width: 300px;
+  }
+  .impact-text {
+    max-width: 500px; /* Limit text width for readability */
   }
 }
